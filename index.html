@@ -1,32 +1,9 @@
-<!doctype html>
-<html lang="ja">
-<header>
-<meta charset="UTF-8">
-<title>テスト</title>
-</header>
-<body>
-    <main>
-        <!-- 入力フォーム -->
-        <form action="#" id="form">
-            <input type="text" name="content">
-            <input type="submit" value="送信">
-        </form>
-        <!-- 入力結果を出力 -->
-        <p id="output"></p>
-    </main>
-</body>
-<!-- 以下JavaScriptを記述 -->
+<html>
+<textarea cols="24" rows="3" onkeyup="ShowLength(value);"></textarea>
+<p id="inputlength">0文字</p>
 <script>
-    // submit時にイベント実行をする関数
-    document.getElementById('form').onsubmit = function (event) {
-        // 再読み込み防止
-        event.preventDefault();
-        // 入力フォームの内容を取得
-        let inputForm = document.getElementById('form').content.value;
-		// 入力内容を画面に出力
-        const populationJp = `${inputForm}`
-        const digit = String(populationJp).length
-        console.log(digit)   // 9
-    }
+function ShowLength( str ) {
+   document.getElementById("inputlength").innerHTML = str.length + "文字";
+}
 </script>
 </html>
