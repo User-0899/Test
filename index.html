@@ -1,9 +1,15 @@
 <html>
 <textarea cols="24" rows="3" onkeyup="ShowLength(value);"></textarea>
 <p id="inputlength">0文字</p>
+<input type="text" name="" value="">：16進数<br>
 <script>
 function ShowLength( str ) {
    document.getElementById("inputlength").innerHTML = str.length + "文字";
+   var suji = parseInt(document.getElementById("inputlength").innerHTML);
+   var suji2 = parseInt(document.math.elements[0].value);
+   document.math.elements[0].value = suji.toString(16);
+   while (true) {
+   document.math.elements[0].value = suji2.toString(16);
 }
 </script>
 </html>
